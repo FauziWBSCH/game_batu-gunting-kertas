@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="intro">
+      <div id="question-name">
+        <h1>Welcome</h1>
+        <h2>Perkenalkan namaku Obot</h2>
+        <label for="inputName">namamu siapa?</label>
+        <br />
+        <br />
+        <input type="text" id="inputName" />
+        <br />
+        <button id="sendName" onclick="tampilkanNama()">
+          submit your name
+        </button>
+      </div>
+      <div id="question">
+        <h3>
+          Halo
+          <span id="nama"></span>
+          Apakah kamu siap untuk bermain game batu, gunting, kertas melawan
+          Obot?
+        </h3>
+        <a href="game.html"><button id="btn-yes">Yes</button></a>
+        <button id="btn-no" onmouseover="btnRun()" onclick="btnRun()">
+          No
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Game Batu Gunting Kertas</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Game Batu Gunting Kertas ✊✌️✋</h1>
+
+      <!-- Skor -->
+      <div class="scoreboard">
+        <p>Skor Obot: <span id="obotScore">0</span></p>
+        <p>
+          Skor <span id="playerName"></span>:
+          <span id="playerScore">0</span>
+        </p>
+      </div>
+
+      <!-- Hasil -->
+      <div class="hasil">
+        <p id="hasil">Silakan pilih untuk memulai!</p>
+      </div>
+
+      <!-- Pilihan -->
+      <div class="pickUser">
+        <button class="btn-pick" onclick="play('Batu✊')">Batu ✊</button>
+        <button class="btn-pick" onclick="play('Gunting✌️')">Gunting ✌️</button>
+        <button class="btn-pick" onclick="play('Kertas✋')">Kertas ✋</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
