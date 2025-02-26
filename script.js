@@ -1,5 +1,6 @@
 let playerSkor = 0;
 let obotSkor = 0;
+let playerName = "";
 
 function play(pickPlayer) {
   const bot = ["Batu✊", "Gunting✌️", "Kertas✋"];
@@ -23,10 +24,31 @@ function play(pickPlayer) {
   document.getElementById("playerScore").textContent = `${playerSkor}`;
   document.getElementById("obotScore").textContent = `${obotSkor}`;
   document.getElementById("hasil").style.animation = "fadeIn 0.5s ease";
+
+  if (playerSkor === 10) {
+    setTimeout(() => {
+      alert(`Selamat ${playerName}! Kamu menang 🎉`);
+      resetGame();
+    }, 100);
+  } else if (obotSkor === 10) {
+    setTimeout(() => {
+      alert(`Maaf ${playerName}, Obot menang! Coba lagi ya 🤖`);
+      resetGame();
+    }, 100);
+  }
+}
+
+function resetGame() {
+  playerSkor = 0;
+  obotSkor = 0;
+  document.getElementById("playerScore").textContent = playerSkor;
+  document.getElementById("obotScore").textContent = obotSkor;
+  document.getElementById("hasil").innerHTML = "Ayo main lagi!";
 }
 
 function tampilkanNama() {
   const nama = document.getElementById("inputName").value;
+  playerName = nama;
   const btn_name = document.getElementById("sendName");
   const btn_question = document.getElementById("question");
   const btn_question_name = document.getElementById("question-name");
@@ -45,8 +67,8 @@ function tampilkanNama() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const playerName = localStorage.getItem("playerName") || nama;
-  document.getElementById("playerName").textContent = playerName; // Ganti "Kamu" dengan nama
+  playerName = localStorage.getItem("playerName") || "NamaPlayer";
+  document.getElementById("playerName").textContent = playerName;
 });
 
 function btnRun() {
